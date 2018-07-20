@@ -1,25 +1,39 @@
 * {
-	/*padding: 0;*/
+	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	font-family: 'PT Sans Caption', sans-serif;
 }
 body {
-	color: black;
+	/*color: black;*/
 	font-family: sans-serif;
 	overflow: hidden;
+	
+
+
 }
 .wrapper {
 	max-width: 1340px;
 	margin: 0 auto;
 	padding: 30px 95px;
+
+
+
+}
+.logo_svoe{
+	background-image: url(logo_svoe.png);
+	background-repeat: no-repeat;
+
+
 }
 .calc_block {
 	width: 100%;
 	outline: 1px solid rgb(192, 175, 175);
 	margin: 0 auto;
 	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.25) 0%, #5C5A5A 150%);
+
 }
+
 .btn_calc{
     text-decoration: none;
     font-weight: 400;
@@ -34,7 +48,8 @@ body {
     display: inline-block;
     transition: 2s;
     margin-top: 25px;
-    margin-bottom: 50px;;
+    margin-bottom: 50px;
+
 }
 .btn_calc:hover{
 	border: 1px solid rgba(255, 213, 0, 0.949);
@@ -46,7 +61,10 @@ body {
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<< Block_3 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .all_offer_block {
 	padding-bottom: 10px;
+	backface-visibility: hidden;
+
 }
+
 .block_3 {
 	font-family: 'PT Sans Caption', sans-serif;
 	height: 100vh;
@@ -55,22 +73,81 @@ body {
 	background-size: cover;
 	text-align: center;
 	background-color: #000000e0;
+	overflow: scroll;
+	perspective: 1000;
+
 }
+
 .block3_price {
 	padding-bottom: 25px;
 	padding-top: 25px;
 	color: #E4DFDB;
 }
-.block3_price:hover {
-	color: rgba(255, 213, 0, 0.949);
-	transition: 0.7s;
+
+.button9 {
+    margin-left: 780px;
+    margin-top: 10px;
+    height: 50px;
+    width: 50px; 
+	cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    user-select: none;
+    padding: 1em 1em;
+    background-repeat: no-repeat;
 }
 
-.offer__item:hover .offer__price big,
-.offer__item:hover .offer__price small {
-	color: black;
-	transition: 0.5s;
+img{
+	 display: inline-block;
+     border: 1px solid rgba(255, 255, 255, 0.25);
+     height: 50px;
+     width: 50px;
+     margin:0 auto;
 }
+
+img:hover{
+	display: inline-block;
+	border-color: rgba(255, 213, 0, 0.949);
+    margin:0 auto;
+    /*background-color: #161414e0;
+    /*-webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);*/
+}
+
+a.button9:hover {
+    transition: .5s linear;
+    background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+}
+
+.offer__item:hover {
+    /*background-image:url(Фон-лэндинг-пэйдж.png);
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-color: white;
+    text-align: center;*/
+    -webkit-transform: rotateY(180deg);/*одна сторона*/
+}
+
+.offer__item:hover .flipper, .offer__item:hover .flipper {
+    -webkit-transform: rotateY(180deg);
+ 
+}
+
+/*.flipper {
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.front, .back, .offer__text {
+    backface-visibility: hidden;
+}
+*/
+.front {
+    z-index: 1;
+}
+
 
 .offer__item {
 	margin-top: 10px;
@@ -79,28 +156,39 @@ body {
 	cursor: pointer;
 	background-color: #efedeb;/*цвет фон под текстом*/
 	transition: 0.5s;
+
+
 }
 .offer__item:hover .offer__title__wrap,
 .offer__item:hover #btn-order {
-	background: rgba(255, 213, 0, 0.949);
+	/*background: rgba(255, 213, 0, 0.949);*/
 	transition: 0.5s;
 	cursor: pointer;
-	color: black;
+    backface-visibility: hidden;
+    /*-webkit-transform: rotateY(180deg);*/
+ 
 }
 .offer__item:hover .offer__title__wrap span {
-	color: black;
+	color: #E4DFDB;
 	transition: 0.5s;
+	/*backface-visibility: hidden;
+	/*font-size: 60px;*/
+
 }
 #btn-order:hover {
 	background: rgba(255, 213, 0, 0.949);
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+ color: black;
 }
 
 .offer__title__wrap {
 	height: 170px;
 	background: #161414e0;
 	position: relative;
+
 }
+
+
 .offer__wrap {
 	width: 121px;
 	height: 121px;
@@ -109,6 +197,8 @@ body {
 	margin: 0 auto;
 	margin-top: 35px;
 	box-shadow: 0 0 15px black;
+
+
 }
 .offer__price {
 	width: 120px;
@@ -119,6 +209,8 @@ body {
 	text-align: center;
 	vertical-align: middle;
 	color: black;
+
+
 }
 .offer__title__wrap span {
 	color: #E4DFDB;
@@ -127,12 +219,15 @@ body {
 	letter-spacing: 1.8px;
 	margin-top: 30px;
 	display: inline-block;
+
+
 }
 .offer__title__wrap big {
 	display: inline-block;
-	color: #999999;
 	font-family: sans-serif;
 	font-size: 20px;
+
+
 }
 .offer__text {
 	font-size: 16px;
@@ -141,6 +236,8 @@ body {
 	margin: 20px;
 	color: #999999;
 	line-height: 24px;
+	backface-visibility: hidden;
+
 }
 b {
 	color: #32CD32;
@@ -172,6 +269,7 @@ span {
 .btn-center {
 	text-align: center;
 	padding-bottom: 10px;
+
 }
 
 /* >>>>>>>>>>>>>> Переключения Вперед-Назад <<<<<<<<<<<<<<<< */
@@ -183,7 +281,7 @@ span {
 .arrows_line {
 	position: absolute;
 	top: 54px;
-	left: 480px;
+	left: 370px;
 }
 .arrow {
 	display: inline-block;

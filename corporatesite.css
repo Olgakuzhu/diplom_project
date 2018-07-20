@@ -82,7 +82,7 @@ body {
 }
 .offer__item:hover .offer__title__wrap,
 .offer__item:hover #btn-order {
-	background: rgba(255, 213, 0, 0.949);
+	
 	transition: 0.5s;
 	cursor: pointer;
 	color: black;
